@@ -32,8 +32,7 @@ function displayInventionDetailsCard(htmlTarget, invention) {
     <div class="invention">
         <img src="/assets/images/inventions/${invention.image}" alt="${invention.name}">
         <h3>${invention.name}</h3>
-        <p>${
-            invention.description.length > 100 ? 
+        <p>${invention.description.length > 100 ?
             invention.description.substring(0, 100) + '...' :
             invention.description
         }</p>
@@ -64,35 +63,21 @@ function displayAllInventions() {
     TODO: Implement this function.
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function displayInvention() {     // Get the id of the invention from the URL  
-       const urlParams = new URLSearchParams(window.location.search);     const id = urlParams.get('id');    
-        // Get the target element from the DOM    
-         const htmlTitleTarget = document.getElementById("invention_title")   
-           const htmlTarget = document.getElementById("invention_details");    
-            // Get the invention object from the array "inventions" using the id   
-              let item = inventions.find(item => item.id == id);     console.log(item)   
-                // Display the details of the invention in the target element  
-                   htmlTitleTarget.innerHTML = item.name    
-                    htmlTarget.innerHTML +=  `
+    const urlParams = new URLSearchParams(window.location.search); const id = urlParams.get('id');
+    // Get the target element from the DOM    
+    const htmlTitleTarget = document.getElementById("invention_title")
+    const htmlTarget = document.getElementById("invention_details");
+    // Get the invention object from the array "inventions" using the id   
+    let item = inventions.find(item => item.id == id);
+    // Display the details of the invention in the target element  
+    htmlTitleTarget.innerHTML = item.name
+    htmlTarget.innerHTML += `
 
                         <img src="/assets/images/inventions/${item.image}" alt="${item.name}">      
                         <p>${item.description}</p>    
                         <p>Inventé par ${item.inventor} en ${item.year}</p>      
-                     `     
-                                 }
+                     `
+}
+
+// vous etes naze
