@@ -76,8 +76,12 @@ function displayInvention() {     // Get the id of the invention from the URL
 
                         <img src="/assets/images/inventions/${item.image}" alt="${item.name}">      
                         <p>${item.description}</p>    
-                        <p>Inventé par ${item.inventor} en ${item.year}</p>      
+
+                        <p>Année de création:  ${item.year}</p>      
+
+                        <p>Inventeur: ${item.inventor}</p> 
+                        
                      `
 }
 
-// vous etes naze
+// vous etes naze !!!
