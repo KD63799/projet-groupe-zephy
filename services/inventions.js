@@ -48,8 +48,12 @@ function displayInventionDetailsCard(htmlTarget, invention) {
     TODO: Implement this function.
 */
 function displayAllInventions() {
-    
+    const inventionsHTML = document.getElementById("inventions_list");
+    inventionsHTML.innerHTML = '';
     // Get target element from the DOM to display the inventions
+    for (let i = 0; i < inventions.length; i++) {
+        displayInventionDetailsCard(inventionsHTML, inventions[i]);
+    }
     // Clear the list
 }
 
