@@ -48,9 +48,9 @@ function displayInventionDetailsCard(htmlTarget, invention) {
     TODO: Implement this function.
 */
 function displayAllInventions() {
+    
     // Get target element from the DOM to display the inventions
     // Clear the list
-    // Create and Display Card for 3 inventions
 }
 
 /*
