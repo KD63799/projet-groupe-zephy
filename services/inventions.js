@@ -62,7 +62,6 @@ function displayAllInventions() {
     It then displays the details of the invention in the target element from the DOM.
     TODO: Implement this function.
 */
-<<<<<<< HEAD
 function displayInvention() {     // Get the id of the invention from the URL  
        const urlParams = new URLSearchParams(window.location.search);   
          const id = urlParams.get('id');    
@@ -75,19 +74,6 @@ function displayInvention() {     // Get the id of the invention from the URL
                 // Display the details of the invention in the target element  
                    htmlTitleTarget.innerHTML = item.name    
                     htmlTarget.innerHTML +=  `
-=======
-
-function displayInvention() {     // Get the id of the invention from the URL  
-    const urlParams = new URLSearchParams(window.location.search); const id = urlParams.get('id');
-    // Get the target element from the DOM    
-    const htmlTitleTarget = document.getElementById("invention_title")
-    const htmlTarget = document.getElementById("invention_details");
-    // Get the invention object from the array "inventions" using the id   
-    let item = inventions.find(item => item.id == id);
-    // Display the details of the invention in the target element  
-    htmlTitleTarget.innerHTML = item.name
-    htmlTarget.innerHTML += `
->>>>>>> 08ea943a8259c455f342e336933beefcdbe53294
 
                         <img src="/assets/images/inventions/${item.image}" alt="${item.name}">      
                         <p>${item.description}</p>    
